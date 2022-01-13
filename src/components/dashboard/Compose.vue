@@ -85,13 +85,13 @@ clear these lines...`,
 .input-body {
   width: 100%;
   height: 40vh;
-  padding: 0.5rem;
+      padding: 0.5rem;
   border: none !important;
   &:focus {
     background: rgb(248, 248, 248);
     border: none !important;
     box-shadow: none;
-    transition: 0.3s ease;
+    transition: .3s ease;
   }
 }
 </style>
