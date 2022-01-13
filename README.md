@@ -1,8 +1,12 @@
 # vue-task
 
-Interview technical task
+Interview technical task - Aman Vishwakarma
 
-credentials for login ;
+I have used bootstrap for styling and theme is totally based on professional softwares available online.
+
+## Note
+
+use the following credentials for login ;
 
 ```
 username : kim
