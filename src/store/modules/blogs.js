@@ -2,6 +2,8 @@
     module for blogs store     
 */
 
+
+// Added pre-blogs for ui preview
 const state = {
     blogs: [
         {
@@ -19,19 +21,21 @@ const state = {
 }
 
 const getters = {
+    // Returns the blogs from store
     getBlogs: (state) => {
         return state.blogs;
     },
 }
 
 const mutations = {
+    // adding composed blog to blog store
     composeBlog: (state, blog) => {
         state.blogs.unshift(blog);
     },
 }
 
 const actions = {
-    // login and set current username to localstorage
+    // Composing blog
     composeBlog(context, blog) {
         context.commit("composeBlog", blog)
     },

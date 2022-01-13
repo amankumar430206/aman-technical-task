@@ -8,7 +8,13 @@
         <h5 class="text-center">Dashboard</h5>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <strong>Welcome {{ $store.getters.getCurrentUser }}!</strong> This a
-          simple vuetask dashboard displaying list of blogs you made.
+          simple vuetask dashboard displaying list of blogs you made and as per
+          the task
+          <ul>
+            <li>user state is maintained on login and logout</li>
+            <li>Simple blog compose feature is added.</li>
+          </ul>
+          Rest Everything is for look and feel of the application.
           <button
             type="button"
             class="btn-close"
@@ -16,6 +22,7 @@
             aria-label="Close"
           ></button>
         </div>
+        <!-- Search bar -->
         <div class="search-bar">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search" />
@@ -28,6 +35,7 @@
             </button>
           </div>
         </div>
+        <!-- Compose Action button -->
         <div class="blog-action d-flex justify-content-center mb-5">
           <button
             @click="$router.push({ name: 'compose' })"
@@ -36,6 +44,7 @@
             + &nbsp; Compose Blog
           </button>
         </div>
+        <!-- Blog results from store -->
         <div class="blogs-results">
           <div class="blogs-recents">
             <p class="fw-bold">Recenet Blogs</p>
@@ -71,6 +80,7 @@
 <script>
 export default {
   computed: {
+    // fetching blogs from store
     blogs() {
       return this.$store.getters.getBlogs;
     },
@@ -79,6 +89,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// CARD
 .card {
   margin-bottom: 0.2rem;
   &:hover {
@@ -88,6 +99,7 @@ export default {
     text-decoration: none !important;
   }
 }
+// BLOG
 .blog {
   &-title,
   &-description {

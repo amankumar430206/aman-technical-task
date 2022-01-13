@@ -39,14 +39,18 @@ clear these lines...`,
   },
   methods: {
     post() {
-      const blog = {
-        title: this.title,
-        description: this.description,
-        author: this.$store.getters.getCurrentUser,
-      };
-      this.$store.dispatch("composeBlog", blog).then(() => {
-        this.$router.go(-1);
-      });
+      if (this.title && this.description) {
+        const blog = {
+          title: this.title,
+          description: this.description,
+          author: this.$store.getters.getCurrentUser,
+        };
+        this.$store.dispatch("composeBlog", blog).then(() => {
+          this.$router.go(-1);
+        });
+      } else {
+        alert("Complete Your Article!");
+      }
     },
   },
 };
@@ -85,13 +89,13 @@ clear these lines...`,
 .input-body {
   width: 100%;
   height: 40vh;
-      padding: 0.5rem;
+  padding: 0.5rem;
   border: none !important;
   &:focus {
     background: rgb(248, 248, 248);
     border: none !important;
     box-shadow: none;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 }
 </style>

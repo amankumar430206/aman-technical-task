@@ -74,11 +74,11 @@ export default {
 <style scoped lang="scss">
 .form-signin {
   width: 100%;
+  height: 100vh;
   max-width: 330px;
   padding: 15px;
   padding-top: 5%;
   margin: auto;
-  height: 100% !important;
 }
 
 .form-signin .checkbox {

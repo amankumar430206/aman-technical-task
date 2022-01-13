@@ -24,6 +24,7 @@
               tag="a"
               to="/me"
               class="nav-link"
+              v-if="$store.getters.loggedIn"
               >Home</router-link
             >
           </li>
@@ -43,15 +44,13 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Profile</a></li>
               <li><a class="dropdown-item" href="#">Notifications</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
           </li>
         </ul>
         <button
           @click="logout()"
           v-if="$store.getters.loggedIn"
-          class="btn btn-danger px-4 ms-2"
+          class="btn btn-danger px-4 ms-4"
         >
           Logout
         </button>
